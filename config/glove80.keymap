@@ -31,8 +31,8 @@
 #define CMENU K_CMENU
 #define CLR BT_CLR
 
-#define NSFT LSHIFT SPACE
-#define NCTR RCTRL TAB
+#define LS LSHIFT
+#define RC RCTRL
 
 
 
@@ -110,8 +110,8 @@
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  LSHFT  |  LCTRL  |  LOWER  | |  LGUI   |  RCTRL  |  RSHFT  |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp ENTER &kp DEL   &kp LSHFT   &kp LGUI  &kp RCTRL &kp ENTER &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-            // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         |  TAB    |  ENTER  |  LALT   | |  RALT   |BACKSPACE|  SPACE  |         |    UP   |  DOWN   |    [    |    ]    |  PGDN   |
-                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &mt NSFT  &tog _NA V&kp ENTER   &mt NCTR  &kp BSPC  &mt NCTR            &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+            // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  ENTER  |  LALT   | |  RALT   |BACKSPACE|  SHIFT  |         |    UP   |  DOWN   |    [    |    ]    |  PGDN   |
+                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &mt LS SPC &tog _NA &kp ENTER   &kp ENTER &kp BSPC  &mt RC TAB          &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
