@@ -106,7 +106,7 @@
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp LSHFT &kp LCTRL &layer_td   &kp LGUI  &kp RCTRL &kp RSHFT &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         |  TAB    |  ENTER  |  LALT   | |  RALT   |BACKSPACE|  SPACE  |         |    UP   |  DOWN   |    [    |    ]    |  PGDN   |
-                &mo MAGIC &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &kp TAB   &kp ENTER &kp LALT    &kp RALT  &kp BSPC  &kp SPACE           &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &kp TAB   &kp ENTER &kp LALT    &kp RALT  &kp BSPC  &kp SPACE           &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
