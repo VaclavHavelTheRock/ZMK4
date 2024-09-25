@@ -103,10 +103,10 @@
                 &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G                                                                   &kp H     &kp J     &kp K     &kp L     &kp SQT   &kp ENTER
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  LSHFT  |  LCTRL  |  LOWER  | |  LGUI   |  RCTRL  |  RSHFT  |    N    |    M    |    ,    |    .    |    /    |    ;    |
-                &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp LSHFT &kp LCTRL &kp G       &kp LGUI  &kp RCTRL &kp RSHFT &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
+                &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp ENTER &kp DEL   &kp LSHFT   &kp LGUI  &kp RCTRL &kp ENTER &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         |  TAB    |  ENTER  |  LALT   | |  RALT   |BACKSPACE|  SPACE  |         |    UP   |  DOWN   |    [    |    ]    |  PGDN   |
-                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &kp TAB   &kp ENTER &kp LALT    &kp RALT  &kp BSPC  &kp SPACE           &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &kp SPACE &kp ENTER &kp ENTER   &kp RALT  &kp BSPC  &kp TAB             &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
