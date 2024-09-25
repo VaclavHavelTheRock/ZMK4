@@ -31,6 +31,11 @@
 #define CMENU K_CMENU
 #define CLR BT_CLR
 
+#define NSFT LSHIFT SPACE
+#define NCTR RCTRL TAB
+
+
+
 / {
     // behaviors {
     //     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -106,7 +111,7 @@
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp ENTER &kp DEL   &kp LSHFT   &kp LGUI  &kp RCTRL &kp ENTER &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         |  TAB    |  ENTER  |  LALT   | |  RALT   |BACKSPACE|  SPACE  |         |    UP   |  DOWN   |    [    |    ]    |  PGDN   |
-                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &kp SPACE &kp ENTER &kp ENTER   &kp RALT  &kp BSPC  &kp TAB             &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &kp RIGHT           &mt NSFT  &tog _NA V&kp ENTER   &mt NCTR  &kp BSPC  &mt NCTR            &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
@@ -127,10 +132,10 @@
                 &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &trans                                                                  &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &bootloader
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  LSHFT  |  LCTRL  |  LOWER  | |  LGUI   |  RCTRL  |  RSHFT  |    N    |    M    |    ,    |    .    |    /    |  PGUP   |
-               &sys_reset &trans    &trans    &trans    &trans    &trans    &bt_2     &bt_3     &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &sys_reset
+               &sys_reset &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &sys_reset
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |  END    |   LEFT  |  RIGHT  |         |  BSPC   |   DEL   |  LALT   | |  RALT   |   RET   |  SPACE  |         |    UP   |  DOWN   |    [    |    ]    |  PGDN   |
-                &trans    &trans    &trans    &trans    &trans              &bt_0     &bt_1     &out OUT_USB &trans   &trans    &trans              &trans    &trans    &trans   &trans     &trans
+                &trans    &trans    &trans    &trans    &trans              &trans    &trans    &trans      &trans    &trans    &trans              &trans    &trans    &trans   &trans     &trans
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
@@ -145,7 +150,7 @@
                 &trans    &none     &none     &none     &none     &kp HOME                                                                &kp LPAR  &kp NUM   &kp NPEQ  &kp NPDV  &kp NPMP  &kp PSCRN
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   TAB   |    Q    |    W    |    E    |    R    |    T    |                                                             |    Y    |    U    |    I    |    O    |    P    |    \    |
-                &trans    &none     &none     &kp UP    &none     &kp END                                                                 &kp RPAR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp NPMN  &kp SLCK
+                &out OUT_USB &none  &none     &kp UP    &none     &kp END                                                                 &kp RPAR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp NPMN  &kp SLCK
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    ;    |    '    |
                 &trans    &none     &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_UP                                                               &kp PRCNT &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp NPPL  &none
