@@ -28,7 +28,6 @@
 #define NPPL KP_PLUS
 #define NPEN KP_ENTER
 #define NPDT KP_DOT
-#define NPEN KP_ENTER
 #define CMENU K_CMENU
 #define CLR BT_CLR
 
