@@ -42,13 +42,13 @@
     //         mods = <(MOD_LSFT|MOD_RSFT)>;
     //         keep-mods = <(MOD_RSFT)>;
     //     };
-        layer_td: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&mo LOWER>, <&to LOWER>;
-        };
-    };
+    //     layer_td: tap_dance_0 {
+    //         compatible = "zmk,behavior-tap-dance";
+    //         #binding-cells = <0>;
+    //         tapping-term-ms = <150>;
+    //         bindings = <&mo LOWER>, <&to LOWER>;
+    //     };
+    // };
 
     macros {
         bt_0: bt_profile_macro_0 {
