@@ -31,6 +31,7 @@
 #define CMENU K_CMENU
 #define CLR BT_CLR
 
+// customs
 #define NSHFT RSHIFT TAB
 #define NCTRL LCTRL SPC
 
@@ -41,7 +42,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LA(TAB)>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        nleft: new_left_arrow {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp LA(TAB)>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
@@ -120,7 +128,7 @@
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp PG_UP &kp PG_DN &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
-                &kp GRAVE &kp HOME  &kp END   &kp LEFT  &nrght           &mt NCTRL &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+                &kp GRAVE &kp HOME  &kp END   &nleft    &nrght              &mt NCTRL &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
