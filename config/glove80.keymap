@@ -56,14 +56,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intleft>, <&kp LC(LS(TAB))>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
         nrght: new_right_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intright>, <&kp LC(TAB)>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
     };
