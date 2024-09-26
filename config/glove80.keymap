@@ -35,20 +35,19 @@
 #define NSHFT RSHIFT TAB
 #define NCTRL LCTRL SPC
 
-
 / {
     behaviors {
         nrght: new_right_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LA(TAB)>;
+            bindings = <&kp RIGHT>, <&kp LS(LG(RIGHT))>;
             mods = <(MOD_RSFT)>;
         };
 
         nleft: new_left_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp LA(TAB)>;
+            bindings = <&kp LEFT>, <&kp LS(LG(LEFT))>;
             mods = <(MOD_RSFT)>;
         };
     };
