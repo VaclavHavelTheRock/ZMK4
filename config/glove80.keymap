@@ -40,14 +40,14 @@
         nrght: new_right_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LS(LG(RIGHT))>;
+            bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
             mods = <(MOD_RSFT)>;
         };
 
         nleft: new_left_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp LS(LG(LEFT))>;
+            bindings = <&kp LEFT>, <&kp LC(LG(LEFT))>;
             mods = <(MOD_RSFT)>;
         };
     };
