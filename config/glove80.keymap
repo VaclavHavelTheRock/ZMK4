@@ -37,86 +37,39 @@
 
 / {
     behaviors {
-        intleft: left_intermediate {
+        eclose: escape_close {                        // Shift + Left  = WIN  + CTRL + Left       (Move Desktop Left)
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LA(F4)>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        intleft: left_intermediate {                        // Shift + Left  = WIN  + CTRL + Left       (Move Desktop Left)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp LC(LG(LEFT))>;
             mods = <(MOD_RSFT)>;
         };
 
-        intright: right_intermediate {
+        intright: right_intermediate {                      // Shift + Right = WIN  + CTRL + Rght       (Move Desktop Right)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
             mods = <(MOD_RSFT)>;
         };
 
-        nleft: new_left_arrow {// Ctrl  + Left  = SHFT + CTRL + TAB        (Move Left One Tab)
+        nleft: new_left_arrow {                             // Ctrl  + Left  = SHFT + CTRL + TAB        (Move Left One Tab)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intleft>, <&kp LC(LS(TAB))>;
             mods = <(MOD_LCTL)>;
         };
 
-        nrght: new_right_arrow {
+        nrght: new_right_arrow {                            // Ctrl  + Right = CTRL + TAB               (Move Right One Tab)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intright>, <&kp LC(TAB)>;
             mods = <(MOD_LCTL)>;
-        };
-
-    };
-
-
-        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-    //     bspc_del: backspace_delete {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp BACKSPACE>, <&kp DELETE>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //         keep-mods = <(MOD_RSFT)>;
-    //     };
-    //     : backspace_delete {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp BACKSPACE>, <&kp DELETE>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //         keep-mods = <(MOD_RSFT)>;
-    //     };
-    // };
-
-    macros {
-        bt_0: bt_profile_macro_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 0>;
-        };
-
-        bt_1: bt_profile_macro_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 1>;
-        };
-
-        bt_2: bt_profile_macro_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 2>;
-        };
-
-        bt_3: bt_profile_macro_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 3>;
         };
     };
 
@@ -136,7 +89,7 @@
                 &kp MINUS &kp Q     &kp W     &kp E     &kp R     &kp T                                                                   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp EQUAL
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G                                                                   &kp H     &kp J     &kp K     &kp L     &kp SQT   &kp ENTER
+                &eclose   &kp A     &kp S     &kp D     &kp F     &kp G                                                                   &kp H     &kp J     &kp K     &kp L     &kp SQT   &kp ENTER
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &kp PG_UP &kp PG_DN &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp SEMI
@@ -211,10 +164,10 @@
                 &none     &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &none                                                                   &none     &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &bootloader
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
-               &sys_reset &none     &none     &none     &none     &none     &bt_2     &bt_3     &none       &none     &none     &none     &none     &none     &none     &none     &none     &sys_reset
+               &sys_reset &none     &none     &none     &none     &none     &none     &none     &none       &none     &none     &none     &none     &none     &none     &none     &none     &sys_reset
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
-                &none     &none     &none     &none     &none               &bt_0     &bt_1     &out OUT_USB &none    &none     &none               &none     &none     &none    &none      &none
+                &none     &none     &none     &none     &none               &none     &none     &out OUT_USB &none    &none     &none               &none     &none     &none    &none      &none
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
