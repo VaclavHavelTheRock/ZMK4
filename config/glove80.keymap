@@ -31,14 +31,22 @@
 #define CMENU K_CMENU
 #define CLR BT_CLR
 
-#define NSHFT RSHIFT SPC
-#define NCTRL LCTRL TAB
+#define NSHFT RSHIFT TAB
+#define NCTRL LCTRL SPC
 
 
 / {
-    // behaviors {
-    //     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-    //     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+    behaviors {
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LALT TAB>;
+            mods = <(MOD_LSFT)>;
+        };
+
+
+        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
+        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
     //     bspc_del: backspace_delete {
     //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
@@ -46,11 +54,12 @@
     //         mods = <(MOD_LSFT|MOD_RSFT)>;
     //         keep-mods = <(MOD_RSFT)>;
     //     };
-    //     layer_td: tap_dance_0 {
-    //         compatible = "zmk,behavior-tap-dance";
+    //     : backspace_delete {
+    //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
-    //         tapping-term-ms = <150>;
-    //         bindings = <&mo LOWER>, <&to LOWER>;
+    //         bindings = <&kp BACKSPACE>, <&kp DELETE>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //         keep-mods = <(MOD_RSFT)>;
     //     };
     // };
 
