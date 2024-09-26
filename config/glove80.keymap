@@ -76,14 +76,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PG_UP>, <&kp LS(LG(LEFT))>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_RSFT)>;
         };
 
         npgdn: new_page_down {                              // Shift + PGDN  = SHFT + WIN + Right       (Send Desktop Right)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PG_DN>, <&kp LC(LG(RIGHT))>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_RSFT)>;
         };
 
         ncomma: new_comma {                                 // Ctrl  +  ,    =  (
