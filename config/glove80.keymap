@@ -37,22 +37,21 @@
 
 / {
     behaviors {
-
         intleft: left_intermediate {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        intright: right_intermediate {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp LC(LG(LEFT))>;
             mods = <(MOD_RSFT)>;
         };
 
-        nleft: new_left_arrow {
+        intright: right_intermediate {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        nleft: new_left_arrow {// Ctrl  + Left  = SHFT + CTRL + TAB        (Move Left One Tab)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intleft>, <&kp LC(LS(TAB))>;
