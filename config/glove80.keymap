@@ -37,19 +37,35 @@
 
 / {
     behaviors {
-        nrght: new_right_arrow {
+
+        intleft: left_intermediate {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
+            mods = <(MOD_LCO)>;
+        };
+
+        intright: right_intermediate {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp LC(LG(LEFT))>;
             mods = <(MOD_RSFT)>;
         };
 
         nleft: new_left_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp LC(LG(LEFT))>;
+            bindings = <&intleft>, <&kp LC(LS(TAB))>;
             mods = <(MOD_RSFT)>;
         };
+
+        nrght: new_right_arrow {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&intright>, <&kp LC(TAB)>;
+            mods = <(MOD_RSFT)>;
+        };
+
     };
 
 
