@@ -37,12 +37,13 @@
 
 / {
     behaviors {
-        gresc: grave_escape {
+        nrght: new_right_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LALT TAB>;
             mods = <(MOD_LSFT)>;
         };
+    };
 
 
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
