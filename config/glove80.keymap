@@ -79,6 +79,7 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
+
 / {
     behaviors {
         //  SHIFT -----------------------------------------------------------------------------------------------------------------------------------
@@ -161,7 +162,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgup    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
-                &kp GRAVE &kp HOME  &kp END   &nleft    &nrght              &kp SPC   &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+                &kp GRAVE &kp HOME  &kp END   &nleft    &nrght              &kp SPC   &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &kp LBKT  &kp RBKT  &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
@@ -185,7 +186,7 @@ ZMK_HOLD_TAP(hmr,
                 &tog _NUM _________ _________ _________ _________ _________ _________ _________ _________   _________ _________ _________ _________ _________ _________ _________ _________ &sys_reset
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
-               &sys_reset _________ _________ &kp PREV  &kp NEXT            _________ _________ _________   _________ _________ _________           &kp VOLUP &kp VOLDN _________ _________ _________
+               &sys_reset _________ _________ &kp PREV  &kp NEXT            _________ _________ _________   _________ _________ _________           &kp VOLDN &kp VOLUP _________ _________ _________
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
@@ -227,7 +228,7 @@ ZMK_HOLD_TAP(hmr,
                 XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX                                                               XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                XXXXXXXXX &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT XXXXXXXXX                                                               XXXXXXXXX &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &bootloader
+                XXXXXXXXX &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT XXXXXXXXX                                                               XXXXXXXXX &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT &bootloader
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                &sys_reset XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX   XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &sys_reset
