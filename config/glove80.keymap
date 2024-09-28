@@ -61,7 +61,7 @@
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    quick-tap-ms = <200>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -72,7 +72,7 @@ ZMK_HOLD_TAP(hml,
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    quick-tap-ms = <200>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -107,14 +107,14 @@ ZMK_HOLD_TAP(hmr,
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intleft>, <&kp LC(LS(TAB))>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         nrght: new_right_arrow {                            // Ctrl  + Right = CTRL + TAB               (Move Right One Tab)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intright>, <&kp LC(TAB)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         npgup: new_page_up {                                // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
