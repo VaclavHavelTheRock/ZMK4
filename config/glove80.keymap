@@ -236,13 +236,13 @@ ZMK_HOLD_TAP(hmr,
                 XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX                                                               XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                XXXXXXXXX &kp DOWN  &kp UP    &nleft    &nrght    XXXXXXXXX                                                               XXXXXXXXX &kp DOWN  &kp UP    &nleft    &nrght    &bootloader
+                &kp ESC   &kp DOWN  &kp UP    &nleft    &nrght    XXXXXXXXX                                                               XXXXXXXXX &kp DOWN  &kp UP    &nleft    &nrght    &kp ESC
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
-               &sys_reset XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX   XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &sys_reset
+                XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX _________ _________ _________   _________ _________ _________ XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &tog _GAM
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
-                XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX           XXXXXXXXX XXXXXXXXX &out OUT_USB XXXXXXXXX XXXXXXXXX XXXXXXXXX          XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
+                XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX           _________ _________ _________   _________ _________ _________           XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
