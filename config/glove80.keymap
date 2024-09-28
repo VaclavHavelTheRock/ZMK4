@@ -106,7 +106,7 @@ ZMK_HOLD_TAP(hmr,
             bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        nspc: new_space {                                   // Shift + Space = ALT + LEFT               (Move Desktop Right)
+        nspc: new_space {                                   // Shift + Space = ALT + LEFT               (Previous)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPC>, <&kp LA(LEFT)>;
