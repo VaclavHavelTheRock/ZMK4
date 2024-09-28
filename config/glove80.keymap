@@ -79,70 +79,63 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
-
 / {
     behaviors {
-        eclose: escape_close {                              // Ctrl  + ESC   = ALT + F4                 (Close Window)
+        //  SHIFT -----------------------------------------------------------------------------------------------------------------------------------
+        npgup: new_page_up {                                // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp LA(F4)>;
-            mods = <(MOD_LCTL)>;
+            bindings = <&kp PG_UP>, <&kp LS(LG(LEFT))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
+        npgdn: new_page_down {                              // Shift + PGDN  = SHFT + WIN + Right       (Send Desktop Right)
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PG_DN>, <&kp LS(LG(RIGHT))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         intleft: left_intermediate {                        // Shift + Left  = WIN  + CTRL + Left       (Move Desktop Left)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp LC(LG(LEFT))>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         intright: right_intermediate {                      // Shift + Right = WIN  + CTRL + Rght       (Move Desktop Right)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
+        //  CONTROL -----------------------------------------------------------------------------------------------------------------------------------
+        eclose: escape_close {                              // Ctrl  + ESC   = ALT + F4                 (Close Window)
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LA(F4)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
         nleft: new_left_arrow {                             // Ctrl  + Left  = SHFT + CTRL + TAB        (Move Left One Tab)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intleft>, <&kp LC(LS(TAB))>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
         nrght: new_right_arrow {                            // Ctrl  + Right = CTRL + TAB               (Move Right One Tab)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&intright>, <&kp LC(TAB)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
-        npgup: new_page_up {                                // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PG_UP>, <&kp LS(LG(LEFT))>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        npgdn: new_page_down {                              // Shift + PGDN  = SHFT + WIN + Right       (Send Desktop Right)
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PG_DN>, <&kp LS(LG(RIGHT))>;
-            mods = <(MOD_RSFT)>;
-        };
-
         ncomma: new_comma {                                 // Ctrl  +  ,    =  (
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp LS(N9)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
         nperiod: new_period {                               // Ctrl  +  .    =  )
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp LS(N0)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
