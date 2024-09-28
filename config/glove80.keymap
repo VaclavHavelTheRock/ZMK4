@@ -155,7 +155,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp MINUS &kp Q     &kp W     &kp E     &kp R     &kp T                                                                   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp EQUAL
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                &eclose   &kp A     &hml GL S &hml AL D &hml CL F &kp G                                                                   &kp H     &hml CR J &hml AR K &hml GR L &kp SQT   &kp ENTER
+                &eclose   &kp A     &hml GL S &hml AL D &hml CL F &kp G                                                                   &kp H     &hmr CR J &hmr AR K &hmr GR L &kp SQT   &kp ENTER
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgup    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
@@ -179,7 +179,7 @@ ZMK_HOLD_TAP(hmr,
                 _________ _________ _________ _________ _________ _________                                                               _________ _________ _________ _________ _________ _________
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                _________ &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT _________                                                               _________ &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &kp PSBRK
+                _________ &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT _________                                                               _________ &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT &kp PSBRK
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 &tog _NUM _________ _________ _________ _________ _________ _________ _________ _________   _________ _________ _________ _________ _________ _________ _________ _________ &sys_reset
