@@ -79,7 +79,6 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
-
 / {
     behaviors {
         //  SHIFT -----------------------------------------------------------------------------------------------------------------------------------
@@ -105,6 +104,12 @@ ZMK_HOLD_TAP(hmr,
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LC(LG(RIGHT))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        nspc: new_space {                      // Shift + Right = WIN  + CTRL + Rght       (Move Desktop Right)
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPC>, <&kp LA(LEFT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         //  CONTROL -----------------------------------------------------------------------------------------------------------------------------------
