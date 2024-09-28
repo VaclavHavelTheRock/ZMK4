@@ -39,11 +39,13 @@
 #define CMENU   K_CMENU
 #define CLR     BT_CLR
 
+//left hand mod shortenings
 #define CL      LCTRL
 #define SL      LSHFT
 #define AL      LALT
 #define GL      LGUI
 
+//right hand mod shortening
 #define CR      RCTRL
 #define SR      RSHFT
 #define AR      RALT
@@ -54,7 +56,7 @@
 #define NCTRL   LCTRL SPC
 
 #define KEYS_L  LC5 LC4 LC3 LC2 LC1 LN5 LN4 LN3 LN2 LN1 LN0 LT5 LT4 LT3 LT2 LT1 LT0 LM5 LM4 LM3 LM2 LM1 LM0 LB5 LB4 LB3 LB2 LB1 LB0 LF5 LF4 LF3 LF2 LF1 // left-hand keys
-#define KEYS_R  RC5 RC4 RC3 RC2 RC1 RN5 RN4 RN3 RN2 RN1 RN0 RT5 RT4 RT3 RT2 RT1 RT0 RM5 RM4 RM3 RM2 RM1 RM0 RB5 RB4 RB3 RB2 RB1 RB0 RF5 RF4 RF3 RF2 RF1 // left-hand keys
+#define KEYS_R  RC5 RC4 RC3 RC2 RC1 RN5 RN4 RN3 RN2 RN1 RN0 RT5 RT4 RT3 RT2 RT1 RT0 RM5 RM4 RM3 RM2 RM1 RM0 RB5 RB4 RB3 RB2 RB1 RB0 RF5 RF4 RF3 RF2 RF1 // rght-hand keys
 #define THUMBS  LH5 LH4 LH3 RH3 RH4 RH5 LH2 LH1 LH0 RH0 RH1 RH2
 
 /* left-hand HRMs */
@@ -67,7 +69,6 @@ ZMK_HOLD_TAP(hml,
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
-
 /* right-hand HRMs */
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
@@ -81,7 +82,8 @@ ZMK_HOLD_TAP(hmr,
 
 / {
     behaviors {
-        //  SHIFT -----------------------------------------------------------------------------------------------------------------------------------
+        //  SHIFT
+        //-----------------------------------------------------------------------------------------------------------------------------------
         npgup: new_page_up {                                // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -112,7 +114,8 @@ ZMK_HOLD_TAP(hmr,
             bindings = <&kp SPC>, <&kp LA(LEFT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        //  CONTROL -----------------------------------------------------------------------------------------------------------------------------------
+        //  CONTROL
+        //-----------------------------------------------------------------------------------------------------------------------------------
         eclose: escape_close {                              // Ctrl  + ESC   = ALT + F4                 (Close Window)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -166,8 +169,8 @@ ZMK_HOLD_TAP(hmr,
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgup    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-            // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
-                &kp GRAVE &kp HOME  &kp END   &nleft    &nrght              &kp SPC   &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &kp LBKT  &kp RBKT  &kp PG_DN
+            // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
+                &kp GRAVE &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &kp PG_DN
             // |---------|---------|---------|---------|-------- |         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
         };
@@ -185,12 +188,12 @@ ZMK_HOLD_TAP(hmr,
                 _________ _________ _________ _________ _________ _________                                                               _________ _________ _________ _________ _________ _________
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                _________ &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT _________                                                               _________ &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT &kp PSBRK
+                _________ &kp DOWN  &kp UP    &nleft    &nrght    _________                                                               _________ &kp DOWN  &kp UP    &nleft    &nrght    &kp PSBRK
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 &tog _NUM _________ _________ _________ _________ _________ _________ _________ _________   _________ _________ _________ _________ _________ _________ _________ _________ &sys_reset
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-            // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
+            // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
                &sys_reset _________ _________ &kp PREV  &kp NEXT            _________ _________ _________   _________ _________ _________           &kp VOLDN &kp VOLUP _________ _________ _________
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
@@ -214,7 +217,7 @@ ZMK_HOLD_TAP(hmr,
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                 _________ &kp CMENU XXXXXXXXX &kp F11   &kp F12   &kp PG_DN _________ _________ _________   _________ _________ _________ &kp COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp NPEN  &tog _GAM
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-            // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
+            // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
                 _________ &kp CAPS  &kp INS   &kp F11   &kp F12             _________ _________ _________   _________ _________ _________           &kp KP_N0 &kp KP_N0 &kp NPDT  &kp NPEN  _________
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
@@ -233,12 +236,12 @@ ZMK_HOLD_TAP(hmr,
                 XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX                                                               XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
-                XXXXXXXXX &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT XXXXXXXXX                                                               XXXXXXXXX &kp DOWN  &kp UP    &kp LEFT  &kp RIGHT &bootloader
+                XXXXXXXXX &kp DOWN  &kp UP    &nleft    &nrght    XXXXXXXXX                                                               XXXXXXXXX &kp DOWN  &kp UP    &nleft    &nrght    &bootloader
             // |---------|---------|---------|---------|---------|---------|-----------------------------| |-----------------------------|---------|---------|---------|---------|---------|---------|
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
                &sys_reset XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX   XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &sys_reset
             // |---------|---------|---------|---------|---------|---------|---------|---------|---------| |---------|---------|---------|---------|---------|---------|---------|---------|---------|
-            // |  MAGIC  |  HOME   |   END   |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |    [    |    ]    |  PGDN   |
+            // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
                 XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX           XXXXXXXXX XXXXXXXXX &out OUT_USB XXXXXXXXX XXXXXXXXX XXXXXXXXX          XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
             // |---------|---------|---------|---------|---------|         |---------|---------|---------| |---------|---------|---------|         |---------|---------|---------|---------|---------|
             >;
