@@ -206,7 +206,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp BRIDN &kp BRIUP &kp PREV  &kp NEXT  &kp C_PP                                                                                    &kp MUTE  &kp VOLDN &kp VOLUP XXXXXXXXX &kp PSBRK
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |   GUI   |    1    |    2    |    3    |    4    |    5    |                                                             |   6     |    7    |    8    |    9    |    0    |    \    |
-                _________ XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &kp HOME                                                                &kp LPAR  &kp NUM   &kp NPEQ  &kp NPDV  &kp NPMP  &kp PSCRN
+              &bootloader XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &kp HOME                                                                &kp LPAR  &kp NUM   &kp NPEQ  &kp NPDV  &kp NPMP  &bootloader
             // |---------|---------|---------|---------|---------|---------|                                                             |---------|---------|---------|---------|---------|---------|
             // |    -    |    Q    |    W    |    E    |    R    |    T    |                                                             |    Y    |    U    |    I    |    O    |    P    |    =    |
                 &out OUT_USB &none  XXXXXXXXX &kp UP    XXXXXXXXX &kp END                                                                 &kp RPAR  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp NPMN  &kp SLCK
