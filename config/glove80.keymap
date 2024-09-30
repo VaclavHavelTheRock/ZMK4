@@ -84,7 +84,6 @@ ZMK_HOLD_TAP(hmr,
 )
 
 / {
-
     macros {
         cntrc: click_center {
             compatible = "zmk,behavior-macro";
@@ -116,7 +115,7 @@ ZMK_HOLD_TAP(hmr,
     behaviors {
         //  SHIFT
         //-----------------------------------------------------------------------------------------------------------------------------------
-        npgup: new_page_up {                                // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
+        npgup: npgdn_up {                                // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PG_UP>, <&kp LS(LG(LEFT))>;
@@ -206,7 +205,7 @@ ZMK_HOLD_TAP(hmr,
                 &eclose   &kp A     &hml GL S &hml AL D &hml CL F &kp G                                                                   &kp H     &hmr CR J &hmr AR K &hmr GR L &kp SQT   &kp ENTER
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┬─────────┬─────────┐ ┌─────────┬─────────┬─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |   HOME  |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
-                &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgup    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
+                &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgdn    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ |─────────|─────────|─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
                 &kp GRAVE &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &tog _NAV
@@ -224,7 +223,7 @@ ZMK_HOLD_TAP(hmr,
                 _________ _________ _________ _________ _________ _________                                                               _________ _________ _________ _________ _________ _________
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                                                             ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |    -    |    Q    |    W    |    E    |    R    |    T    |                                                             |    Y    |    U    |    I    |    O    |    P    |    =    |
-                _________ _________ _________ _________ _________ _________                                                               _________ _________ &kp CAPS  _________ _________ _________
+                _________ _________ _________ _________ _________ _________                                                               _________ _________ &kp CAPS  &updir    _________ _________
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                                                             ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
                 _________ &kp DOWN  &kp UP    &nleft    &nrght    _________                                                               _________ &kp DOWN  &kp UP    &nleft    &nrght    &kp K_PP
