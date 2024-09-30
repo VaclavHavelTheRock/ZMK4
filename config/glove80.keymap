@@ -254,7 +254,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgdn    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
-                &to_nav   &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &to_nav   &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &to_nav
+        &backlight_toggle &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &to_nav   &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &to_nav
             // └─────────┴─────────┴─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┴─────────┴─────────┘
             >;
         };
