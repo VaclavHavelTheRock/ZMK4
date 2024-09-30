@@ -94,6 +94,14 @@ ZMK_HOLD_TAP(hmr,
                 , <&macro_tap &kp F20 &mkp LCLK>
                 ;
         };
+        sidec: click_side {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_wait_time 50>
+                , <&macro_tap &kp F19 &mkp LCLK>
+                ;
+        };
     };
 
 
@@ -160,6 +168,12 @@ ZMK_HOLD_TAP(hmr,
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp LS(N0)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        clickr: clicker {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&cntrc>, <&sidec>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
