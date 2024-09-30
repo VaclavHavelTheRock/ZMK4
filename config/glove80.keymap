@@ -254,7 +254,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgdn    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
-                &tog _NAV &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &tog _NAV &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &tog _NAV
+                &to_nav   &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &to_nav   &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &to_nav
             // └─────────┴─────────┴─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┴─────────┴─────────┘
             >;
         };
@@ -275,10 +275,10 @@ ZMK_HOLD_TAP(hmr,
                 _________ &kp DOWN  &kp UP    &nleft    &nrght    _________                                                               _________ &kp DOWN  &kp UP    &nleft    &nrght    &kp K_PP
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┬─────────┬─────────┐ ┌─────────┬─────────┬─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |  HOME   |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
-                &tog _NUM _________ _________ _________ _________ _________ _________ _________ _________   _________ _________ _________ &clickr   _________ _________ _________ _________ _________
+                &to_num   _________ _________ _________ _________ _________ _________ _________ _________   _________ _________ _________ &clickr   _________ _________ _________ _________ _________
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
-                _________ _________ _________ &kp PREV  &kp NEXT            _________ _________ _________   _________ _________ _________           &kp VOLDN &kp VOLUP _________ _________ _________
+                _________ _________ _________ &kp PREV  &kp NEXT            _________ &to_hom   _________   _________ _________ _________           &kp VOLDN &kp VOLUP _________ _________ _________
             // └─────────┴─────────┴─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┴─────────┴─────────┘
             >;
         };
@@ -299,7 +299,7 @@ ZMK_HOLD_TAP(hmr,
                 _________ XXXXXXXXX &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_UP                                                               &kp PRCNT &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp NPPL  XXXXXXXXX
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┬─────────┬─────────┐ ┌─────────┬─────────┬─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |  HOME   |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
-                _________ &kp CMENU XXXXXXXXX &kp F11   &kp F12   &kp PG_DN _________ _________ _________   _________ _________ _________ &kp COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp NPEN  &tog _GAM
+                &to_nav   &kp CMENU XXXXXXXXX &kp F11   &kp F12   &kp PG_DN _________ _________ _________   _________ _________ _________ &kp COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp NPEN  &to_gam
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
                 _________ &kp CAPS  &kp INS   &kp F11   &kp F12             _________ _________ _________   _________ _________ _________           &kp KP_N0 &kp KP_N0 &kp NPDT  &kp NPEN  _________
@@ -323,7 +323,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp ESC   &kp DOWN  &kp UP    &nleft    &nrght    XXXXXXXXX                                                               XXXXXXXXX &kp DOWN  &kp UP    &nleft    &nrght    &kp ESC
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┬─────────┬─────────┐ ┌─────────┬─────────┬─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |    `    |    Z    |    X    |    C    |    V    |    B    |  PGUP   |  PGDN   | DELETE  | |   ALT   |  HOME   |   END   |    N    |    M    |    ,    |    .    |    /    |    ;    |
-                XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX _________ _________ _________   _________ _________ _________ XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &tog _GAM
+                XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX _________ _________ _________   _________ _________ _________ XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX &to_num
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
                 XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX           _________ _________ _________   _________ _________ _________           XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX
