@@ -138,6 +138,13 @@ ZMK_HOLD_TAP(hmr,
             bindings = <&kp SPC>, <&kp LA(LEFT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        clickr: clicker {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&cntrc>, <&sidec>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         //  CONTROL
         //-----------------------------------------------------------------------------------------------------------------------------------
         eclose: escape_close {                              // Ctrl  + ESC   = ALT + F4                 (Close Window)
@@ -168,12 +175,6 @@ ZMK_HOLD_TAP(hmr,
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp LS(N0)>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-        clickr: clicker {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&cntrc>, <&sidec>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
