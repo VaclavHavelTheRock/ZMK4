@@ -106,7 +106,7 @@ ZMK_HOLD_TAP(hmr,
             #binding-cells = <0>;
             bindings
                 = <&macro_wait_time 1>
-                , <&macro_tap &kp DOT &kp DOT &kpFSLH>
+                , <&macro_tap &kp DOT &kp DOT &kp FSLH>
                 ;
         };
     };
