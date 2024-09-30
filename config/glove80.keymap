@@ -120,7 +120,7 @@ ZMK_HOLD_TAP(hmr,
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &tog _HOM>
+                = <&macro_press &to _HOM>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(170, 100, 100)>
                 ;
         };
@@ -130,7 +130,7 @@ ZMK_HOLD_TAP(hmr,
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &tog _NAV>
+                = <&macro_press &to _NAV>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(0, 100, 100)>
                 ;
         };
@@ -140,7 +140,7 @@ ZMK_HOLD_TAP(hmr,
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &tog _NUM>
+                = <&macro_press &to _NUM>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(85, 100, 100)>
                 ;
         };
@@ -150,11 +150,10 @@ ZMK_HOLD_TAP(hmr,
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &tog _GAM>
+                = <&macro_press &to _GAM>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(212, 100, 100)>
                 ;
         };
-
     };
 
 
