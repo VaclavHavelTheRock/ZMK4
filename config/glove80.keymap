@@ -163,7 +163,7 @@ ZMK_HOLD_TAP(hmr,
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&to>;
+            bindings = <&mo>, <&to_nav>;
         };
 
         //  SHIFT
