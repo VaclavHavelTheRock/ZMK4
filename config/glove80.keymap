@@ -163,11 +163,10 @@ ZMK_HOLD_TAP(hmr,
             tap-ms = <0>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &to _GAM>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(0, 100, 50)>
                 , <&macro_press &mo _NAV>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo MACRO_PLACEHOLDER>
+                , <&macro_release &mo _NAV>
                 , <&macro_tap &rgb_ug RGB_COLOR_HSB(170, 100, 50)>
                 ;
         };
