@@ -161,12 +161,12 @@ ZMK_HOLD_TAP(hmr,
     behaviors {
 
         pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
+            #binding-cells = <0>;
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
-            bindings = <&to>, <&mo>;
+            bindings = <&to _NAV>, <&mo _NAV>;
         };
         //  SHIFT
         //-----------------------------------------------------------------------------------------------------------------------------------
