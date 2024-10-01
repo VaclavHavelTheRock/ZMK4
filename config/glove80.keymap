@@ -165,7 +165,7 @@ ZMK_HOLD_TAP(hmr,
             tapping-term-ms = <200>;
             bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
         };
-    };
+
         //  SHIFT
         //-----------------------------------------------------------------------------------------------------------------------------------
         npgup: npgdn_up {                                   // Shift + PGUP  = SHFT + WIN + Left        (Send Desktop Left)
