@@ -177,6 +177,7 @@ ZMK_HOLD_TAP(hmr,
             #binding-cells = <0>;
             bindings
                 = <&macro_press &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK >
+                ;
         };
     };
 
