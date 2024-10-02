@@ -179,7 +179,7 @@ ZMK_HOLD_TAP(hmr,
             // tap-ms = <5>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &mkp LCLK &mkp LCLK>
+                = <&macro_tap &mkp LCLK &mkp LCLK &mkp LCLK &mkp LCLK>
                 ;
         };
     };
