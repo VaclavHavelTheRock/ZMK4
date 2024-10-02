@@ -124,7 +124,7 @@ ZMK_HOLD_TAP(hmr,
             #binding-cells = <0>;
             bindings
                 = <&macro_press &to _HOM>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(170, 100, 50)>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(BLU)>
                 ;
         };
         to_nav: to_nav {
