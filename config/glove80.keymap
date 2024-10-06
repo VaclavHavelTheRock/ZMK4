@@ -101,9 +101,7 @@ ZMK_HOLD_TAP(hmr,
             bindings
                 = <&macro_tap &kp CL(T) &kp CL(V) &kp ENTER>
                 ;
-        }
-
-
+        };
         cntrc: click_center {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
