@@ -56,7 +56,7 @@
 
 // customs
 #define NSHFT   RSHIFT TAB
-#define NCTRL   LCTRL SPC
+#define NCTRL   LCTRL SP
 
 #define BLU        170
 #define GRN         85
@@ -69,7 +69,6 @@
 #define KEYS_L  LC5 LC4 LC3 LC2 LC1 LN5 LN4 LN3 LN2 LN1 LN0 LT5 LT4 LT3 LT2 LT1 LT0 LM5 LM4 LM3 LM2 LM1 LM0 LB5 LB4 LB3 LB2 LB1 LB0 LF5 LF4 LF3 LF2 LF1 // left-hand keys
 #define KEYS_R  RC5 RC4 RC3 RC2 RC1 RN5 RN4 RN3 RN2 RN1 RN0 RT5 RT4 RT3 RT2 RT1 RT0 RM5 RM4 RM3 RM2 RM1 RM0 RB5 RB4 RB3 RB2 RB1 RB0 RF5 RF4 RF3 RF2 RF1 // rght-hand keys
 #define THUMBS  LH5 LH4 LH3 RH3 RH4 RH5 LH2 LH1 LH0 RH0 RH1 RH2
-
 
 /* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
@@ -94,6 +93,16 @@ ZMK_HOLD_TAP(hmr,
 
 / {
     macros {
+        srch:  search_highlighted_selection {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings
+                = <&macro_tap &kp CL(T) &kp CL(V) &kp ENTER>
+        }
+
+
         cntrc: click_center {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -185,7 +194,7 @@ ZMK_HOLD_TAP(hmr,
     };
 
     behaviors {
-        td_mt: tap_dance_mod_tap {
+        mtly: mod_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -287,7 +296,7 @@ ZMK_HOLD_TAP(hmr,
                 &kp GRAVE &kp Z     &kp X     &kp C     &kp V     &kp B     &npgup    &npgdn    &kp DEL     &kp LALT  &kp HOME  &kp END   &kp N     &kp M     &ncomma   &nperiod  &kp FSLH  &kp SEMI
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
-          &rgb_ug RGB_TOG &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &td_mt 1 1 &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &to_nav
+          &rgb_ug RGB_TOG &kp LBKT  &kp RBKT  &nleft    &nrght              &nspc     &mtly 1 1 &kp ENTER   &kp LGUI  &kp BSPC  &mt NSHFT           &kp DOWN  &kp UP    &nleft    &nrght    &to_nav
             // └─────────┴─────────┴─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┴─────────┴─────────┘
             >;
         };
@@ -302,7 +311,7 @@ ZMK_HOLD_TAP(hmr,
                 _________ _________ _________ _________ _________ _________                                                               _________ _________ _________ _________ _________ _________
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                                                             ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |    -    |    Q    |    W    |    E    |    R    |    T    |                                                             |    Y    |    U    |    I    |    O    |    P    |    =    |
-                _________ _________ _________ _________ _________ _________                                                               _________ _________ &kp CAPS  &updir    _________ _________
+                _________ _________ _________ _________ _________ _________                                                               _________ &kp srch  &kp CAPS  &updir    _________ _________
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                                                             ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |   ESC   |    A    |    S    |    D    |    F    |    G    |                                                             |    H    |    J    |    K    |    L    |    '    |  ENTER  |
                 _________ &kp DOWN  &kp UP    &nleft    &nrght    _________                                                               _________ &kp DOWN  &kp UP    &nleft    &nrght    &kp C_PP
@@ -311,7 +320,7 @@ ZMK_HOLD_TAP(hmr,
                 &to_num   _________ _________ _________ _________ _________ _________ _________ _________   _________ _________ _________ &clickr   _________ _________ _________ _________ _________
             // ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
             // |  MAGIC  |    [    |    ]    |  LEFT   |  RIGHT  |         | Control |  LAYER  |  ENTER  | |   GUI   |BACKSPACE|  SHIFT  |         |   UP    |  DOWN   |  LEFT   |  RIGHT  |  PGDN   |
-                _________ _________ _________ &kp PREV  &kp NEXT            _________ &to_hom   _________   _________ &lt 1 SPC _________           &kp VOLDN &kp VOLUP _________ _________ _________
+                _________ _________ _________ &kp PREV  &kp NEXT            _________ &to_hom   _________   _________ _________ _________           &kp VOLDN &kp VOLUP _________ _________ _________
             // └─────────┴─────────┴─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘ └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┴─────────┴─────────┘
             >;
         };
