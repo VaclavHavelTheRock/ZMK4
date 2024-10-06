@@ -100,6 +100,7 @@ ZMK_HOLD_TAP(hmr,
             tap-ms = <1>;
             bindings
                 = <&macro_tap &kp CL(T) &kp CL(V) &kp ENTER>
+                ;
         }
 
 
