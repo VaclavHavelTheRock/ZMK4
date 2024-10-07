@@ -106,6 +106,44 @@ ZMK_HOLD_TAP(hmr,
                 , <&macro_tap &kp ENTER>
                 ;
         };
+        lucky: lucky_search_highlighted_selection {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings
+                // CTRL(C T)
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C &kp T>
+                , <&macro_release &kp LCTRL>
+
+                // HTTPS
+                , <&macro_tap &kp H &kp T &kp T &kp S>
+
+                // :
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp SEMI>
+                , <&macro_release &kp LCTRL>
+
+                // //www.google.com/search
+                , <&macro_tap &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H>
+
+                // ?
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp DOT>
+                , <&macro_release &kp LCTRL>
+
+                // copy + &
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V &kp N7>
+                , <&macro_release &kp LCTRL>
+
+                // btnI=I
+                , <&macro_tap &kp B &kp T &kp N &kp I &kp EQUAL &kp I>
+                , <&macro_tap &kp ENTER>
+                // "https://www.google.com/search?q=" SS_LCTL("v") "&btnI=I"
+                ;
+        };
         cntrc: click_center {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
