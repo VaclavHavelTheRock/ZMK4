@@ -94,15 +94,15 @@ ZMK_HOLD_TAP(hmr,
 
 / {
     macros {
-        // search: search_highlighted_selection {
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <1>;
-        //     tap-ms = <1>;
-        //     bindings
-        //         = <&macro_tap &kp CL(T) &kp CL(V) &kp ENTER>
-        //         ;
-        // };
+        search: search_highlighted_selection {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings
+                = <&macro_tap &kp T &kp V &kp ENTER>
+                ;
+        };
         cntrc: click_center {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
