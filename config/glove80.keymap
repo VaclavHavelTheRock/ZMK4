@@ -122,7 +122,7 @@ ZMK_HOLD_TAP(hmr,
 
                 // :
                 , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp SEMI>
+                , <&macro_tap &kp SEMI &kp SEMI>
                 , <&macro_release &kp LSHFT>
 
                 // //www.google.com/search
@@ -133,7 +133,7 @@ ZMK_HOLD_TAP(hmr,
 
                 // ?
                 , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp DOT>
+                , <&macro_tap &kp SEMI>
                 , <&macro_release &kp LSHFT>
 
                 // copy paste
