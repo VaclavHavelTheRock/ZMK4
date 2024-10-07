@@ -126,7 +126,10 @@ ZMK_HOLD_TAP(hmr,
                 , <&macro_release &kp LSHFT>
 
                 // //www.google.com/search
-                , <&macro_tap &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H>
+                , <&macro_tap &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp G &kp O &kp O &kp G &kp L &kp E &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp A &kp R &kp C>
+
+                , <&macro_tap &kp H>
+
 
                 // ?
                 , <&macro_press &kp LSHFT>
