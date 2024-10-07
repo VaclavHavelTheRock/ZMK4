@@ -100,7 +100,10 @@ ZMK_HOLD_TAP(hmr,
             wait-ms = <1>;
             tap-ms = <1>;
             bindings
-                = <&macro_tap &kp T &kp V &kp ENTER>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp C &kp T &kp V>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp ENTER>
                 ;
         };
         cntrc: click_center {
