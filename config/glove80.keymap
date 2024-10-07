@@ -112,6 +112,7 @@ ZMK_HOLD_TAP(hmr,
             wait-ms = <30>;
             tap-ms = <30>;
             bindings
+
                 // CTRL(C T)
                 = <&macro_press &hello_world>
                 // , <&macro_tap &kp C &kp T>
