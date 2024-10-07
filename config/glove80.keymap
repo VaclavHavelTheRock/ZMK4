@@ -330,7 +330,6 @@ ZMK_HOLD_TAP(hmr,
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
