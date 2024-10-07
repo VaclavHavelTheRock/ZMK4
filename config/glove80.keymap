@@ -135,12 +135,12 @@ ZMK_HOLD_TAP(hmr,
 
                 // copy paste
                 , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp V &kp N7>
+                , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
 
                 // &
                 , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp V &kp N7>
+                , <&macro_tap &kp N7>
                 , <&macro_release &kp LSHFT>
 
                 // btnI=I
